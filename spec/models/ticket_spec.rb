@@ -5,7 +5,7 @@
  
    describe 'validation' do
      before do
-       @ticket = Ticket.new(name: 'akiinyo', seat_id_seq: 'A-7', address: 'Tokyo', price_paid: '3000', email_address: 'akiinyo@example.com')
+       @ticket = Ticket.new(name: 'akiinyo', seat_id_seq: 'A-7', address: 'Tokyo', price_paid: '3000', email_address: 'akiinyo@example.com', phone_number: '123-456-7890')
      end
 
      subject { @ticket }

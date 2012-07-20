@@ -19,5 +19,15 @@
        before { @ticket.name = 'akiinyo' }
        it { should be_valid }
      end
+
+     context '電話番号が未入力の場合' do
+       before { @ticket.phone_number = '' }
+       it { should_not be_valid }
+     end
+
+     context '電話番号を入力した場合' do
+       before { @ticket.phone_number = '00000000000' }
+       it { should be_valid }
+     end
    end
  end

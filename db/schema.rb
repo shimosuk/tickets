@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517133451) do
+ActiveRecord::Schema.define(:version => 20120615125334) do
 
   create_table "tickets", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20120517133451) do
     t.text     "address"
     t.decimal  "price_paid"
     t.string   "email_address"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "phone_number",  :limit => nil
   end
 
 end

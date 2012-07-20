@@ -1,6 +1,8 @@
 Tickets::Application.routes.draw do
   resources :tickets
-
+#resources :informations
+#resources :informations, only: :index
+match '/informations', to: 'informations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

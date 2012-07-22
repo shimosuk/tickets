@@ -31,7 +31,7 @@
      end
 
      context '電話番号が長すぎる場合' do
-       before { @ticket.phone_number = '01234567890' }
+       before { @ticket.phone_number = '012345678901' }
        it { should_not be_valid }
      end
 

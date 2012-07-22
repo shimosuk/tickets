@@ -25,8 +25,18 @@
        it { should_not be_valid }
      end
 
-     context '電話番号を入力した場合' do
-       before { @ticket.phone_number = '00000000000' }
+     context '電話番号が短すぎる場合' do
+       before { @ticket.phone_number = '012345678' }
+       it { should_not be_valid }
+     end
+
+     context '電話番号が長すぎる場合' do
+       before { @ticket.phone_number = '01234567890' }
+       it { should_not be_valid }
+     end
+
+     context '電話番号が適切な場合' do
+       before { @ticket.phone_number = '0123456789' }
        it { should be_valid }
      end
    end
